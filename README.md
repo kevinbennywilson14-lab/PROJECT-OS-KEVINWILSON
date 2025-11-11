@@ -2,47 +2,169 @@
 Project Based Learning 2 
 
 LATIHAN 2
-# 1.  Membuat Direktori => cd project_Sistem_Operasi_B 
-​
-- Perintah  cd  digunakan untuk mengubah direktori kerja saat ini.
-​
--  project_Sistem_Operasi_B  adalah nama direktori yang ingin Anda masuki. Perintah ini akan mengubah direktori kerja Anda ke direktori  project_Sistem_Operasi_B .
-​
-# 2.  mkdir src doc data 
-​
--  mkdir  adalah perintah untuk membuat direktori baru.
-​
--  src ,  doc , dan  data  adalah nama-nama direktori yang akan dibuat di dalam direktori kerja saat ini (yaitu,  project_Sistem_Operasi_B ).
-​
-# 3.  ls 
-​
--  ls  adalah perintah untuk menampilkan daftar file dan direktori di direktori kerja saat ini. Dalam hal ini, ia akan menampilkan  src ,  doc , dan  data  (direktori yang baru saja dibuat).
-​
-# 4.  touch README.MD src main.sh 
-​
--  touch  adalah perintah untuk membuat file kosong baru.
-​
--  README.MD  adalah file yang biasanya berisi deskripsi proyek (dalam format Markdown).
-​
--  main.sh  adalah file yang kemungkinan akan berisi script utama proyek (shell script).
-​
--  src  seharusnya tidak ada di sini. Mungkin ada kesalahan ketik, karena  src  adalah direktori.
-​
-# 5.  ls 
-​
-- Sama seperti sebelumnya,  ls  menampilkan daftar file dan direktori di direktori kerja saat ini. Kali ini, ia akan menampilkan  data ,  doc ,  main.sh ,  README.MD , dan  src .
-​
-# 6.  tree 
-​
--  tree  adalah perintah untuk menampilkan struktur direktori dalam format pohon (tree). Perintah ini akan menampilkan struktur direktori dan file di dalam direktori kerja saat ini.
-​
-# 7.  du -h --max-depth=1 
-​
--  du  adalah perintah untuk menghitung penggunaan disk.
-​
--  -h  adalah opsi untuk menampilkan ukuran dalam format yang mudah dibaca (human-readable).
-​
--  --max-depth=1  adalah opsi untuk membatasi kedalaman direktori yang ditampilkan menjadi 1 level (yaitu, hanya direktori di dalam direktori kerja saat ini).
+
+Berikut langkah-langkah penulisan syntax nya:
+
+# 1. Masuk ke Folder Proyek
+
+```
+cd project_Sistem_Operasi_B
+
+```
+
+Penjelasan:
+
+Perintah cd berarti change directory — digunakan untuk masuk ke folder proyek kamu yang bernama project_Sistem_Operasi_B.
+
+
+Pastikan folder ini sudah ada di direktori home kamu sebelumnya (~/).
+
+
+
+
+
+# 2. Membuat Struktur Folder Proyek
+
+```
+mkdir src doc data
+```
+
+
+Penjelasan:
+
+
+
+
+mkdir (make directory) digunakan untuk membuat folder baru.
+
+
+Di sini kamu membuat tiga folder:
+
+
+
+src → tempat menyimpan source code (kode program utama).
+
+
+doc → tempat menyimpan dokumentasi.
+
+
+data → tempat menyimpan data atau file pendukung.
+
+
+
+
+
+
+
+
+
+# 3. Membuat File Baru
+
+
+```
+touch README.MD src main.sh
+```
+
+
+Penjelasan:
+
+
+
+
+touch digunakan untuk membuat file kosong.
+
+
+Tapi di sini ada sedikit kesalahan kecil: touch README.MD src main.sh akan mencoba membuat file bernama src, bukan menambah isi folder src.
+
+Yang benar seharusnya:
+
+touch README.MD main.sh
+
+
+agar hanya membuat dua file kosong:
+
+
+
+README.MD → file dokumentasi utama proyek (biasanya berisi deskripsi proyek di GitHub).
+
+
+main.sh → file shell script utama (kode yang bisa dijalankan di terminal Linux).
+
+
+
+
+
+
+
+
+
+# 4. Melihat Struktur Folder
+
+
+tree
+
+
+
+Penjelasan:
+
+
+
+
+Menampilkan struktur folder dan file secara hierarkis.
+
+
+Output-nya menunjukkan:
+
+.
+├── data
+├── doc
+├── main.sh
+├── README.MD
+└── src
+
+
+Artinya proyek sudah memiliki struktur direktori dan file yang rapi.
+
+
+
+
+
+
+Jika perintah tree belum ada di sistem kamu, install dengan:
+
+
+sudo apt install tree
+
+
+
+
+
+
+# 5. Melihat Ukuran Folder
+
+
+```
+du -h --max-depth=1
+
+```
+
+Penjelasan:
+
+
+
+
+du = disk usage, untuk melihat ukuran setiap folder.
+
+
+-h = human-readable, agar ukuran ditampilkan dalam format seperti KB, MB, GB.
+
+
+--max-depth=1 = hanya menampilkan ukuran di tingkat pertama direktori (tidak masuk ke subfolder).
+
+
+Output-nya memperlihatkan ukuran masing-masing folder (data, src, doc) dan total ukuran keseluruhan.
+
+
  
 # BERIKUT LINK DESKRIPSI HASIL DOKUMENTASI PEMBUATAN :
 (https://drive.google.com/file/d/1rQHojHyYDlKKZIZoci0xasVl_Mm9jymL/view?usp=drivesdk)
